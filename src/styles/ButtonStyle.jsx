@@ -13,8 +13,14 @@ export const StButton = styled.div`
     border-radius: 8px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
     color: ${(props) => props.color};
     background-color: ${(props) => props.backgroundColor};
+  }
+
+  button:active {
+    background-color: #ff2929;
   }
 
   .large-button {
