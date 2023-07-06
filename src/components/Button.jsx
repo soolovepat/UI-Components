@@ -7,7 +7,10 @@ const Button = () => {
     <StBox>
       <h1>Button</h1>
       <StButton borderColor="#55efc4" backgroundColor="#55efc4">
-        <button className="large-button">
+        <button
+          className="large-button"
+          onClick={() => alert("버튼을 만들어보세요")}
+        >
           Large Primary Button <ChevronRight color="" size={12} />
         </button>
         <button className="medium-button">Medium</button>
