@@ -1,7 +1,11 @@
 import React from "react";
 
 const Modal = () => {
-  return <div>Modal</div>;
+  return (
+    <div>
+      <h1>Modal</h1>
+    </div>
+  );
 };
 
 export default Modal;
