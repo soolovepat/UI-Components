@@ -1,6 +1,6 @@
 import React from "react";
 import { StButton, StBox } from "../styles/ButtonStyle";
-import { ChevronRight } from "react-bootstrap-icons";
+import { ChevronRight, Bell } from "react-bootstrap-icons";
 
 const Button = () => {
   return (
@@ -21,7 +21,7 @@ const Button = () => {
           className="large-button"
           onClick={() => prompt("암호를 입력해주세요")}
         >
-          Large Negative Button <ChevronRight color="" size={12} />
+          Large Negative Button <Bell color="" size={14} />
         </button>
         <button className="medium-button">Medium</button>
         <button className="small-button">Small</button>
