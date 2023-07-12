@@ -18,6 +18,19 @@ const Input = () => {
     setProduct({ ...product, [label]: value });
   };
 
+  const onClickHandler = () => {
+    if (product.name !== "" || product.price !== "0") {
+      alert(
+        `{ name: ${product.name}, price: ${product.price.replace(
+          /^0+|,/g,
+          ""
+        )} }`
+      );
+    } else {
+      alert("이름과 가격을 입력해주세요");
+    }
+  };
+
   return (
     <div>
       <h1>Input</h1>
@@ -33,6 +46,7 @@ const Input = () => {
         value={product.price}
         onChange={(event) => onChangehandler(event, "price")}
       />
+      <button onClick={onClickHandler}>저장</button>
     </div>
   );
 };
