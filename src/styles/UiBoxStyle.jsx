@@ -3,6 +3,8 @@ import { styled } from "styled-components";
 export const UiBoxStyle = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 10px;
 
   padding: 30px;
   border-radius: 20px;

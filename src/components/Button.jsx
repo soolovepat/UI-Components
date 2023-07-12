@@ -1,38 +1,85 @@
 import React from "react";
 import { StButton, StBox } from "../styles/ButtonStyle";
 import { ChevronRight, Bell } from "react-bootstrap-icons";
-import UiBox from "../Container/UiBox";
+import { blueColor, grayColor } from "../assets/color";
 
-const Button = () => {
+const Button = ({ children, size, btn_style, ...props }) => {
+  const sizeHandler = (size) => {
+    switch (size) {
+      case "large":
+        return { width: "200px", height: "50px" };
+      case "medium":
+        return { width: "130px", height: "40px" };
+      case "small":
+        return { width: "100px", height: "30px" };
+      default:
+        return "";
+    }
+  };
+
+  switch (btn_style) {
+    case "primary":
+      return (
+        <PrimaryButton {...props} style={sizeHandler(size)}>
+          {children}
+        </PrimaryButton>
+      );
+    case "secondary":
+      return (
+        <SecondaryButton {...props} style={sizeHandler(size)}>
+          {children}
+        </SecondaryButton>
+      );
+    case "icon":
+      return <IconButton {...props}>{children}</IconButton>;
+    default:
+      return (
+        <StButton {...props} style={sizeHandler(size)}>
+          {children}
+        </StButton>
+      );
+  }
+};
+
+const PrimaryButton = ({ children, ...props }) => {
   return (
-    <UiBox title={"Button"}>
-      <StBox>
-        <StButton borderColor="#55efc4" backgroundColor="#55efc4">
-          <button
-            className="large-button"
-            onClick={() => alert("알림이 설정되었습니다")}
-          >
-            Large Primary Button <ChevronRight color="" size={12} />
-          </button>
-          <button className="medium-button">Medium</button>
-          <button className="small-button">Small</button>
-        </StButton>
-        <StButton
-          borderColor="#fab1a0"
-          backgroundColor="#fab1a0"
-          color="#d63031"
-        >
-          <button
-            className="large-button"
-            onClick={() => prompt("암호를 입력해주세요")}
-          >
-            Large Negative Button <Bell color="" size={14} />
-          </button>
-          <button className="medium-button">Medium</button>
-          <button className="small-button">Small</button>
-        </StButton>
-      </StBox>
-    </UiBox>
+    <StButton
+      {...props}
+      $bg_color={blueColor[0]}
+      $hover_bg_color={blueColor[2]}
+      $font_color={grayColor[0]}
+      $hover_font_color={blueColor[0]}
+    >
+      {children}
+    </StButton>
+  );
+};
+
+const SecondaryButton = ({ children, ...props }) => {
+  return (
+    <StButton
+      {...props}
+      $bg_color={blueColor[1]}
+      $hover_bg_color={blueColor[2]}
+      $font_color={grayColor[0]}
+      $hover_font_color={blueColor[0]}
+    >
+      {children}
+    </StButton>
+  );
+};
+
+const IconButton = ({ children, ...props }) => {
+  return (
+    <StButton
+      {...props}
+      $bg_color={blueColor[0]}
+      $hover_bg_color={blueColor[2]}
+      $font_color={grayColor[0]}
+      $hover_font_color={blueColor[0]}
+    >
+      {children}
+    </StButton>
   );
 };
 

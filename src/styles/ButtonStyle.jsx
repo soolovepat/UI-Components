@@ -1,32 +1,41 @@
 import { styled } from "styled-components";
 
-export const StButton = styled.div`
+export const StButton = styled.button`
+  /*display: flex;
+  gap: 10px;*/
+  ${(props) => props.style}
+  letter-spacing: 0px;
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 
-  button {
-    letter-spacing: 0px;
-    display: flex;
-    gap: 6px;
+  border: 0;
+  border-radius: 8px;
 
-    border: 0;
-    border-radius: 8px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  cursor: pointer;
 
-    color: ${(props) => props.color};
-    background-color: ${(props) => props.backgroundColor};
+  width: ${(props) => props.width};
+
+  color: ${(props) => props.$font_color};
+  background-color: ${(props) => props.$bg_color};
+
+  font-size: 14px;
+  font-weight: 600;
+
+  &:hover {
+    color: ${(props) => props.$hover_font_color};
+    background-color: ${(props) => props.$hover_bg_color};
   }
+  /* &:active {
+    background-color: ${(props) =>
+    props.backgroundColor === "#55efc4" ? "#00cca0e2" : "#f38d86"};
+  }*/
 
-  button:active {
-    background-color: #ff2929;
-  }
-
-  .large-button {
+  /*.large-button {
     height: 50px;
     width: 200px;
-    font-weight: 600;
+    
     border: 3px solid ${(props) => props.borderColor};
     background-color: #fff;
   }
@@ -39,7 +48,7 @@ export const StButton = styled.div`
   .small-button {
     height: 40px;
     width: 100px;
-  }
+  }*/
 `;
 
 export const StBox = styled.div`

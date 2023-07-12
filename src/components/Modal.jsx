@@ -3,6 +3,7 @@ import { StButton } from "../styles/ButtonStyle";
 import ModalWindow from "./Modal/ModalWindow";
 import MiniModal from "./Modal/MiniModal";
 import UiBox from "../Container/UiBox";
+import Button from "./Button";
 
 const Modal = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -25,21 +26,16 @@ const Modal = () => {
   return (
     <>
       <UiBox title={"Modal"}>
-        <StButton backgroundColor="#55efc4">
-          <button className="small-button" onClick={openModalHandler}>
-            open modal
-          </button>
-        </StButton>
-
-        <StButton
-          borderColor="#fab1a0"
-          backgroundColor="#fab1a0"
-          color="#d63031"
+        <Button size={"large"} btn_style={"primary"} onClick={openModalHandler}>
+          open modal
+        </Button>
+        <Button
+          size={"large"}
+          btn_style={"primary"}
+          onClick={openMiniModalHandler}
         >
-          <button className="large-button" onClick={openMiniModalHandler}>
-            open modal
-          </button>
-        </StButton>
+          open modal
+        </Button>
       </UiBox>
       {openModal
         ? openModal && (
