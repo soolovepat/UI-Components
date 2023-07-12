@@ -21,10 +21,14 @@ const GlobalStyle = createGlobalStyle`
   main {
     display: flex;
     justify-content: center;
-    margin: 8px;
+    gap: 30px;
 
-    > div {
-      
+    
+
+    > section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     }
