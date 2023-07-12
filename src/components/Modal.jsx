@@ -23,12 +23,24 @@ const Modal = () => {
   };
 
   return (
-    <UiBox title={"Modal"}>
-      <StButton backgroundColor="#55efc4">
-        <button className="small-button" onClick={openModalHandler}>
-          open modal
-        </button>
-      </StButton>
+    <>
+      <UiBox title={"Modal"}>
+        <StButton backgroundColor="#55efc4">
+          <button className="small-button" onClick={openModalHandler}>
+            open modal
+          </button>
+        </StButton>
+
+        <StButton
+          borderColor="#fab1a0"
+          backgroundColor="#fab1a0"
+          color="#d63031"
+        >
+          <button className="large-button" onClick={openMiniModalHandler}>
+            open modal
+          </button>
+        </StButton>
+      </UiBox>
       {openModal
         ? openModal && (
             <ModalWindow
@@ -37,17 +49,12 @@ const Modal = () => {
             />
           )
         : null}
-      <StButton borderColor="#fab1a0" backgroundColor="#fab1a0" color="#d63031">
-        <button className="large-button" onClick={openMiniModalHandler}>
-          open modal
-        </button>
-      </StButton>
       {openMiniModal
         ? openMiniModal && (
             <MiniModal openMiniModalHandler={openMiniModalHandler} />
           )
         : null}
-    </UiBox>
+    </>
   );
 };
 
