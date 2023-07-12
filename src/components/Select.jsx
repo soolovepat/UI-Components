@@ -1,4 +1,5 @@
 import React from "react";
+import UiBox from "../Container/UiBox";
 
 const Select = () => {
   const OPTIONS = [
@@ -9,8 +10,7 @@ const Select = () => {
     { value: "블루베리" },
   ];
   return (
-    <div>
-      <h1>Select</h1>
+    <UiBox title={"Select"}>
       <select defaultValue={"바나나"}>
         {OPTIONS.map((option, idx) => {
           return (
@@ -20,7 +20,7 @@ const Select = () => {
           );
         })}
       </select>
-    </div>
+    </UiBox>
   );
 };
 

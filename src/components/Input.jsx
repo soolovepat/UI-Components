@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import UiBox from "../Container/UiBox";
 
 const Input = () => {
   const [product, setProduct] = useState({ name: "", price: "0" });
@@ -32,8 +33,7 @@ const Input = () => {
   };
 
   return (
-    <div>
-      <h1>Input</h1>
+    <UiBox title={"Input"}>
       <input
         type="text"
         name="name"
@@ -47,7 +47,7 @@ const Input = () => {
         onChange={(event) => onChangehandler(event, "price")}
       />
       <button onClick={onClickHandler}>저장</button>
-    </div>
+    </UiBox>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StButton } from "../styles/ButtonStyle";
 import ModalWindow from "./Modal/ModalWindow";
 import MiniModal from "./Modal/MiniModal";
+import UiBox from "../Container/UiBox";
 
 const Modal = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -22,8 +23,7 @@ const Modal = () => {
   };
 
   return (
-    <div>
-      <h1>Modal</h1>
+    <UiBox title={"Modal"}>
       <StButton backgroundColor="#55efc4">
         <button className="small-button" onClick={openModalHandler}>
           open modal
@@ -47,7 +47,7 @@ const Modal = () => {
             <MiniModal openMiniModalHandler={openMiniModalHandler} />
           )
         : null}
-    </div>
+    </UiBox>
   );
 };
 
