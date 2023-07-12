@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
+import { StButton } from "../styles/ButtonStyle";
+import ModalWindow from "./Modal/ModalWindow";
+import MiniModal from "./Modal/MiniModal";
 
 const Modal = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [openMiniModal, setOpenMiniModal] = useState(false);
+
+  const openModalHandler = () => {
+    setOpenModal(!openModal);
+  };
+
+  const openMiniModalHandler = () => {
+    setOpenMiniModal(!openMiniModal);
+  };
+
+  const confirmButton = () => {
+    if (window.confirm("창이 닫힙니다.")) {
+      setOpenModal(!openModal);
+    }
+  };
+
   return (
     <div>
       <h1>Modal</h1>
+      <StButton backgroundColor="#55efc4">
+        <button className="small-button" onClick={openModalHandler}>
+          open modal
+        </button>
+      </StButton>
+      {openModal
+        ? openModal && (
+            <ModalWindow
+              openModalHandler={openModalHandler}
+              confirmButton={confirmButton}
+            />
+          )
+        : null}
+      <StButton borderColor="#fab1a0" backgroundColor="#fab1a0" color="#d63031">
+        <button className="large-button" onClick={openMiniModalHandler}>
+          open modal
+        </button>
+      </StButton>
+      {openMiniModal
+        ? openMiniModal && (
+            <MiniModal openMiniModalHandler={openMiniModalHandler} />
+          )
+        : null}
     </div>
   );
 };
