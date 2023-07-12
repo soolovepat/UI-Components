@@ -54,5 +54,6 @@ export const StButton = styled.button`
 export const StBox = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
 `;

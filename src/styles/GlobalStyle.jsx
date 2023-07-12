@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
 
   h2 {
     margin: 0 0 10px 0;
+    color:#c4c4c4;
   }
 `;
 

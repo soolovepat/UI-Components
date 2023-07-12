@@ -1,7 +1,7 @@
 import React from "react";
 import { StButton, StBox } from "../styles/ButtonStyle";
-import { ChevronRight, Bell } from "react-bootstrap-icons";
-import { blueColor, grayColor } from "../assets/color";
+
+import { blueColor, pinkColor, grayColor } from "../assets/colors";
 
 const Button = ({ children, size, btn_style, ...props }) => {
   const sizeHandler = (size) => {
@@ -59,10 +59,10 @@ const SecondaryButton = ({ children, ...props }) => {
   return (
     <StButton
       {...props}
-      $bg_color={blueColor[1]}
-      $hover_bg_color={blueColor[2]}
-      $font_color={grayColor[0]}
-      $hover_font_color={blueColor[0]}
+      $bg_color={pinkColor[0]}
+      $hover_bg_color={pinkColor[1]}
+      $font_color={grayColor[2]}
+      $hover_font_color={grayColor[1]}
     >
       {children}
     </StButton>
@@ -75,7 +75,7 @@ const IconButton = ({ children, ...props }) => {
       {...props}
       $bg_color={blueColor[0]}
       $hover_bg_color={blueColor[2]}
-      $font_color={grayColor[0]}
+      $font_color={grayColor[1]}
       $hover_font_color={blueColor[0]}
     >
       {children}
