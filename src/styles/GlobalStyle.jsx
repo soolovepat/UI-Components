@@ -32,6 +32,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     }
+
+  h2 {
+    margin: 0 0 10px 0;
+  }
 `;
 
 export default GlobalStyle;
