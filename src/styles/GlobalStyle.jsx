@@ -23,7 +23,10 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     margin: 8px;
 
-    
+    > div {
+      
+    }
+
     }
 `;
 
