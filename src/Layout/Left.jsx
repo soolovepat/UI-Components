@@ -4,10 +4,10 @@ import Modal from "../components/Modal";
 
 const Left = () => {
   return (
-    <div>
+    <section>
       <Button />
       <Modal />
-    </div>
+    </section>
   );
 };
 

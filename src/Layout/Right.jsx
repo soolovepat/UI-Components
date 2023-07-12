@@ -4,10 +4,10 @@ import Select from "../components/Select";
 
 const Right = () => {
   return (
-    <div>
+    <section>
       <Input />
       <Select />
-    </div>
+    </section>
   );
 };
 
