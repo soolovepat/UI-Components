@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./Layout/Header";
 import Left from "./Layout/Left";
 import Right from "./Layout/Right";
