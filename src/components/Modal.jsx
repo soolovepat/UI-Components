@@ -4,6 +4,7 @@ import ModalWindow from "./Modal/ModalWindow";
 import MiniModal from "./Modal/MiniModal";
 import UiBox from "../Container/UiBox";
 import Button from "./Button";
+import ModalPotal from "../Potal";
 
 const Modal = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -43,19 +44,21 @@ const Modal = () => {
           open modal
         </Button>
       </UiBox>
-      {openModal
-        ? openModal && (
-            <ModalWindow
-              openModalHandler={openModalHandler}
-              confirmButton={confirmButton}
-            />
-          )
-        : null}
-      {openMiniModal
-        ? openMiniModal && (
-            <MiniModal openMiniModalHandler={openMiniModalHandler} />
-          )
-        : null}
+      <ModalPotal>
+        {openModal
+          ? openModal && (
+              <ModalWindow
+                openModalHandler={openModalHandler}
+                confirmButton={confirmButton}
+              />
+            )
+          : null}
+        {openMiniModal
+          ? openMiniModal && (
+              <MiniModal openMiniModalHandler={openMiniModalHandler} />
+            )
+          : null}
+      </ModalPotal>
     </>
   );
 };
