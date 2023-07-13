@@ -9,9 +9,9 @@ const Button = ({ children, size, btn_style, ...props }) => {
       case "large":
         return { width: "200px", height: "50px" };
       case "medium":
-        return { width: "130px", height: "40px" };
+        return { width: "130px", height: "45px" };
       case "small":
-        return { width: "100px", height: "30px" };
+        return { width: "100px", height: "40px" };
       default:
         return "";
     }
@@ -61,8 +61,8 @@ const SecondaryButton = ({ children, ...props }) => {
       {...props}
       $bg_color={pinkColor[0]}
       $hover_bg_color={pinkColor[1]}
-      $font_color={grayColor[2]}
-      $hover_font_color={grayColor[1]}
+      $font_color={grayColor[3]}
+      $hover_font_color={grayColor[2]}
     >
       {children}
     </StButton>
