@@ -2,7 +2,7 @@ import React from "react";
 import UiBox from "./UiBox";
 import { VerticalContainer } from "../styles/ButtonStyle";
 import Button from "../components/Button";
-import { ChevronRight, Bell } from "react-bootstrap-icons";
+import ICON from "../assets/icons";
 
 const ButtonContainer = () => {
   return (
@@ -15,7 +15,8 @@ const ButtonContainer = () => {
             btn_style={"primary"}
             icon={"on"}
           >
-            large primary button <ChevronRight color="" size={12} />
+            large primary button
+            <ICON.stars />
           </Button>
           <Button size={"medium"} btn_style={"primary"} icon={"off"}>
             medium
@@ -33,7 +34,7 @@ const ButtonContainer = () => {
             btn_style={"secondary"}
             icon={"on"}
           >
-            large secondary button <Bell color="" size={14} />
+            large secondary button <ICON.suitHeartFill />
           </Button>
           <Button size={"medium"} btn_style={"secondary"} icon={"off"}>
             medium

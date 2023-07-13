@@ -1,6 +1,6 @@
 import React from "react";
 import { Overlay, ModalContainer, Modal } from "../../styles/ModalStyle";
-import { XLg } from "react-bootstrap-icons";
+import ICON from "../../assets/icons";
 import Button from "../Button";
 import { RightTopPosition } from "../../styles/ButtonStyle";
 
@@ -21,7 +21,7 @@ const MiniModal = ({ openMiniModalHandler }) => {
             btn_style={"primary"}
             icon={"off"}
           >
-            <XLg color="" size={12} />
+            <ICON.xLg />
           </Button>
         </RightTopPosition>
       </Modal>

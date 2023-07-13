@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UiBox from "../Container/UiBox";
-import { CaretDownFill } from "react-bootstrap-icons";
+import ICON from "../assets/icons";
 import Button from "./Button";
 
 const Select = () => {
@@ -32,7 +32,7 @@ const Select = () => {
         icon={"on"}
       >
         {selectList}
-        <CaretDownFill color="" size={12} />
+        <ICON.caretDownFill />
       </Button>
       {optionList && (
         <ul>
