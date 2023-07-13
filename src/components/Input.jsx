@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UiBox from "../Container/UiBox";
+import Button from "./Button";
 
 const Input = () => {
   const [product, setProduct] = useState({ name: "", price: "" });
@@ -49,7 +50,9 @@ const Input = () => {
         onChange={(event) => onChangehandler(event, "price")}
         placeholder="price"
       />
-      <button onClick={onClickHandler}>저장</button>
+      <Button onClick={onClickHandler} size={"small"} btn_style={"secondary"}>
+        save
+      </Button>
     </UiBox>
   );
 };
