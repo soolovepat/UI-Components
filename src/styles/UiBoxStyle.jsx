@@ -46,7 +46,8 @@ export const UiBoxStyle = styled.div`
     border-radius: 8px;
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
+    color: ${grayColor[1]};
 
     background-color: ${pinkColor[0]};
 
