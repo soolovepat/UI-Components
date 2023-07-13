@@ -32,16 +32,22 @@ export const StButton = styled.button`
   }*/
 `;
 
-export const StBox = styled.div`
+export const VerticalContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 `;
 
-export const VerticalContainer = styled.div`
+export const HorizontalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
+`;
+
+export const RightTopPosition = styled.div`
+  position: absolute;
+  top: 30px;
+  right: 30px;
 `;
