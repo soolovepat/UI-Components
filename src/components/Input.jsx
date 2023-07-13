@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UiBox from "../Container/UiBox";
 
 const Input = () => {
-  const [product, setProduct] = useState({ name: "", price: "0" });
+  const [product, setProduct] = useState({ name: "", price: "" });
 
   const onChangehandler = (event, label) => {
     let value = event.target.value;
@@ -13,7 +13,7 @@ const Input = () => {
 
     // 한글 입력 시 '0' 유지
     if (label === "price" && value === "") {
-      value = "0";
+      alert("1 이상의 숫자를 입력하세요");
     }
 
     setProduct({ ...product, [label]: value });
@@ -30,6 +30,7 @@ const Input = () => {
     } else {
       alert("이름과 가격을 입력해주세요");
     }
+    setProduct({ name: "", price: "" });
   };
 
   return (
@@ -39,12 +40,14 @@ const Input = () => {
         name="name"
         value={product.name}
         onChange={(event) => onChangehandler(event, "name")}
+        placeholder="name"
       />
       <input
         type="text"
         name="price"
         value={product.price}
         onChange={(event) => onChangehandler(event, "price")}
+        placeholder="price"
       />
       <button onClick={onClickHandler}>저장</button>
     </UiBox>
