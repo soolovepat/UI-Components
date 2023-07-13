@@ -41,7 +41,7 @@ export const UiBoxStyle = styled.div`
     transform: translate(0, 114px);
 
     width: 240px;
-    padding: 10px 0px;
+    padding: 8px 0px;
     margin: 0;
     border-radius: 8px;
 
@@ -52,12 +52,13 @@ export const UiBoxStyle = styled.div`
 
     > li {
       list-style: none;
-      margin: 10px 10px;
-      padding: 10px;
+      margin: 10px;
+      padding: 12px 18px;
       border-radius: 8px;
       transition: all 0.2s ease-in-out;
 
       &:hover {
+        color: ${grayColor[2]};
         background-color: ${pinkColor[1]};
       }
     }
