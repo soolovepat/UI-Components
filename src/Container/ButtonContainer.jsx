@@ -14,13 +14,13 @@ const ButtonContainer = () => {
             size={"large"}
             btn_style={"primary"}
           >
-            Large Primary Button <ChevronRight color="" size={12} />
+            large primary button <ChevronRight color="" size={12} />
           </Button>
           <Button size={"medium"} btn_style={"primary"}>
-            Medium
+            medium
           </Button>
           <Button size={"small"} btn_style={"primary"}>
-            Small
+            small
           </Button>
         </StBox>
       </UiBox>
@@ -31,13 +31,13 @@ const ButtonContainer = () => {
             size={"large"}
             btn_style={"secondary"}
           >
-            Large Negative Button <Bell color="" size={14} />
+            large secondary button <Bell color="" size={14} />
           </Button>
           <Button size={"medium"} btn_style={"secondary"}>
-            Medium
+            medium
           </Button>
           <Button size={"small"} btn_style={"secondary"}>
-            Small
+            small
           </Button>
         </StBox>
       </UiBox>
