@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { grayColor } from "../assets/colors";
+import { grayColor, pinkColor } from "../assets/colors";
 
 export const UiBoxStyle = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const UiBoxStyle = styled.div`
     padding: 0 24px;
     border-radius: 8px;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 50px;
 
     border: 0;
     outline: none;
@@ -33,6 +33,33 @@ export const UiBoxStyle = styled.div`
 
     &::placeholder {
       color: ${grayColor[1]};
+    }
+  }
+
+  ul {
+    position: absolute;
+    transform: translate(0, 114px);
+
+    width: 240px;
+    padding: 10px 0px;
+    margin: 0;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background-color: ${pinkColor[0]};
+
+    > li {
+      list-style: none;
+      margin: 10px 10px;
+      padding: 10px;
+      border-radius: 8px;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: ${pinkColor[1]};
+      }
     }
   }
 `;
