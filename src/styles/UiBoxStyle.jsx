@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { grayColor } from "../assets/colors";
 
 export const UiBoxStyle = styled.div`
   display: flex;
@@ -16,5 +17,22 @@ export const UiBoxStyle = styled.div`
   &:hover {
     box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.04);
     transform: translateY(-10px);
+  }
+
+  input {
+    padding: 0 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 40px;
+
+    border: 0;
+    outline: none;
+
+    color: ${grayColor[0]};
+    background-color: ${grayColor[2]};
+
+    &::placeholder {
+      color: ${grayColor[1]};
+    }
   }
 `;
