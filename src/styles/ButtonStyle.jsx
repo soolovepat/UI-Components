@@ -38,3 +38,10 @@ export const StBox = styled.div`
   align-items: center;
   gap: 10px;
 `;
+
+export const VerticalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+`;
