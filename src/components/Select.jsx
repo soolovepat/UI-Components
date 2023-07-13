@@ -5,11 +5,11 @@ import Button from "./Button";
 
 const Select = () => {
   const OPTIONS = [
-    { value: "사과" },
-    { value: "바나나" },
-    { value: "오렌지" },
-    { value: "키위" },
-    { value: "블루베리" },
+    { value: "Love" },
+    { value: "Peace" },
+    { value: "Mind" },
+    { value: "Universe" },
+    { value: "Body" },
   ];
   const [selectList, setSelectList] = useState(OPTIONS[0].value);
   const [optionList, setOptionList] = useState(false);
@@ -35,7 +35,7 @@ const Select = () => {
         <CaretDownFill color="" size={12} />
       </Button>
       {optionList && (
-        <ul defaultValue={"바나나"}>
+        <ul>
           {OPTIONS.map((option, idx) => {
             return (
               <li
