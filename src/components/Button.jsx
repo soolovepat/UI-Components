@@ -1,6 +1,5 @@
 import React from "react";
 import { StButton, StBox } from "../styles/ButtonStyle";
-
 import { blueColor, pinkColor, grayColor } from "../assets/colors";
 
 const Button = ({ children, size, btn_style, icon, ...props }) => {
