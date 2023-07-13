@@ -3,11 +3,11 @@ import { StButton, StBox } from "../styles/ButtonStyle";
 
 import { blueColor, pinkColor, grayColor } from "../assets/colors";
 
-const Button = ({ children, size, btn_style, ...props }) => {
+const Button = ({ children, size, btn_style, icon, ...props }) => {
   const sizeHandler = (size) => {
     switch (size) {
       case "large":
-        return { width: "200px", height: "50px" };
+        return { width: "240px", height: "50px" };
       case "medium":
         return { width: "130px", height: "45px" };
       case "small":
@@ -17,24 +17,49 @@ const Button = ({ children, size, btn_style, ...props }) => {
     }
   };
 
+  const iconHandler = (icon) => {
+    switch (icon) {
+      case "on":
+        return "space-between";
+      case "off":
+        return "center";
+    }
+  };
+
   switch (btn_style) {
     case "primary":
       return (
-        <PrimaryButton {...props} style={sizeHandler(size)}>
+        <PrimaryButton
+          {...props}
+          style={sizeHandler(size)}
+          justify_content={iconHandler(icon)}
+        >
           {children}
         </PrimaryButton>
       );
     case "secondary":
       return (
-        <SecondaryButton {...props} style={sizeHandler(size)}>
+        <SecondaryButton
+          {...props}
+          style={sizeHandler(size)}
+          justify_content={iconHandler(icon)}
+        >
           {children}
         </SecondaryButton>
       );
     case "icon":
-      return <IconButton {...props}>{children}</IconButton>;
+      return (
+        <IconButton {...props} justify_content={iconHandler(icon)}>
+          {children}
+        </IconButton>
+      );
     default:
       return (
-        <StButton {...props} style={sizeHandler(size)}>
+        <StButton
+          {...props}
+          style={sizeHandler(size)}
+          justify_content={iconHandler(icon)}
+        >
           {children}
         </StButton>
       );
@@ -49,6 +74,7 @@ const PrimaryButton = ({ children, ...props }) => {
       $hover_bg_color={blueColor[2]}
       $font_color={grayColor[0]}
       $hover_font_color={blueColor[0]}
+      justify_content={props.justify_content}
     >
       {children}
     </StButton>
@@ -63,6 +89,7 @@ const SecondaryButton = ({ children, ...props }) => {
       $hover_bg_color={pinkColor[1]}
       $font_color={grayColor[3]}
       $hover_font_color={grayColor[2]}
+      justify_content={props.justify_content}
     >
       {children}
     </StButton>
@@ -77,6 +104,7 @@ const IconButton = ({ children, ...props }) => {
       $hover_bg_color={blueColor[2]}
       $font_color={grayColor[1]}
       $hover_font_color={blueColor[0]}
+      justify_content={props.justify_content}
     >
       {children}
     </StButton>

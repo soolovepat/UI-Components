@@ -2,9 +2,10 @@ import { styled } from "styled-components";
 
 export const StButton = styled.button`
   ${(props) => props.style}
+  padding: 0 14px;
 
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) => props.justify_content};
   align-items: center;
   gap: 6px;
 

@@ -25,7 +25,12 @@ const Select = () => {
 
   return (
     <UiBox title={"Select"}>
-      <Button onClick={onClickSelectBox} size={"large"} btn_style={"primary"}>
+      <Button
+        onClick={onClickSelectBox}
+        size={"large"}
+        btn_style={"secondary"}
+        icon={"on"}
+      >
         {selectList}
         <CaretDownFill color="" size={12} />
       </Button>

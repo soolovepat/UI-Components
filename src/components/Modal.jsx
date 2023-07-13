@@ -26,13 +26,19 @@ const Modal = () => {
   return (
     <>
       <UiBox title={"Modal"}>
-        <Button size={"large"} btn_style={"primary"} onClick={openModalHandler}>
+        <Button
+          size={"large"}
+          btn_style={"primary"}
+          onClick={openModalHandler}
+          icon={"off"}
+        >
           open modal
         </Button>
         <Button
           size={"large"}
           btn_style={"primary"}
           onClick={openMiniModalHandler}
+          icon={"off"}
         >
           open modal
         </Button>

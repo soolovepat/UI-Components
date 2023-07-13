@@ -50,7 +50,12 @@ const Input = () => {
         onChange={(event) => onChangehandler(event, "price")}
         placeholder="price"
       />
-      <Button onClick={onClickHandler} size={"small"} btn_style={"secondary"}>
+      <Button
+        onClick={onClickHandler}
+        size={"small"}
+        btn_style={"secondary"}
+        icon={"off"}
+      >
         save
       </Button>
     </UiBox>

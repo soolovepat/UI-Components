@@ -13,13 +13,14 @@ const ButtonContainer = () => {
             onClick={() => alert("알림이 설정되었습니다")}
             size={"large"}
             btn_style={"primary"}
+            icon={"on"}
           >
             large primary button <ChevronRight color="" size={12} />
           </Button>
-          <Button size={"medium"} btn_style={"primary"}>
+          <Button size={"medium"} btn_style={"primary"} icon={"off"}>
             medium
           </Button>
-          <Button size={"small"} btn_style={"primary"}>
+          <Button size={"small"} btn_style={"primary"} icon={"off"}>
             small
           </Button>
         </StBox>
@@ -30,13 +31,14 @@ const ButtonContainer = () => {
             onClick={() => prompt("암호를 입력해주세요")}
             size={"large"}
             btn_style={"secondary"}
+            icon={"on"}
           >
             large secondary button <Bell color="" size={14} />
           </Button>
-          <Button size={"medium"} btn_style={"secondary"}>
+          <Button size={"medium"} btn_style={"secondary"} icon={"off"}>
             medium
           </Button>
-          <Button size={"small"} btn_style={"secondary"}>
+          <Button size={"small"} btn_style={"secondary"} icon={"off"}>
             small
           </Button>
         </StBox>
