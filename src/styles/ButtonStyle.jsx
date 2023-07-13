@@ -1,10 +1,8 @@
 import { styled } from "styled-components";
 
 export const StButton = styled.button`
-  /*display: flex;
-  gap: 10px;*/
   ${(props) => props.style}
-  letter-spacing: 0px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,14 +12,14 @@ export const StButton = styled.button`
   border-radius: 8px;
 
   cursor: pointer;
-
-  width: ${(props) => props.width};
+  transition: all 0.2s ease-in-out;
 
   color: ${(props) => props.$font_color};
   background-color: ${(props) => props.$bg_color};
 
   font-size: 14px;
   font-weight: 600;
+  letter-spacing: 0px;
 
   &:hover {
     color: ${(props) => props.$hover_font_color};
@@ -30,24 +28,6 @@ export const StButton = styled.button`
   /* &:active {
     background-color: ${(props) =>
     props.backgroundColor === "#55efc4" ? "#00cca0e2" : "#f38d86"};
-  }*/
-
-  /*.large-button {
-    height: 50px;
-    width: 200px;
-    
-    border: 3px solid ${(props) => props.borderColor};
-    background-color: #fff;
-  }
-
-  .medium-button {
-    height: 45px;
-    width: 130px;
-  }
-
-  .small-button {
-    height: 40px;
-    width: 100px;
   }*/
 `;
 
