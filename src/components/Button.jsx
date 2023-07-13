@@ -12,6 +12,8 @@ const Button = ({ children, size, btn_style, icon, ...props }) => {
         return { width: "130px", height: "45px" };
       case "small":
         return { width: "100px", height: "40px" };
+      case "short":
+        return { width: "50px", height: "50px" };
       default:
         return "";
     }
@@ -49,7 +51,7 @@ const Button = ({ children, size, btn_style, icon, ...props }) => {
       );
     case "icon":
       return (
-        <IconButton {...props} justify_content={iconHandler(icon)}>
+        <IconButton {...props} style={sizeHandler(size)}>
           {children}
         </IconButton>
       );
@@ -104,7 +106,6 @@ const IconButton = ({ children, ...props }) => {
       $hover_bg_color={blueColor[2]}
       $font_color={grayColor[1]}
       $hover_font_color={blueColor[0]}
-      justify_content={props.justify_content}
     >
       {children}
     </StButton>

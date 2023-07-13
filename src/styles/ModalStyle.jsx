@@ -26,13 +26,14 @@ export const ModalContainer = styled.div`
 `;
 
 export const Modal = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
   width: 350px;
   height: 260px;
   padding: 40px 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   position: fixed;
 
@@ -40,7 +41,6 @@ export const Modal = styled.div`
   border-radius: 30px;
 
   > p {
-    margin-top: 74px;
     text-align: center;
     line-height: 34px;
     font-size: 18px;

@@ -1,5 +1,8 @@
 import React from "react";
 import { Overlay, ModalContainer, Modal } from "../../styles/ModalStyle";
+import { XLg } from "react-bootstrap-icons";
+import Button from "../Button";
+import { RightTopPosition } from "../../styles/ButtonStyle";
 
 const MiniModal = ({ openMiniModalHandler }) => {
   return (
@@ -11,7 +14,16 @@ const MiniModal = ({ openMiniModalHandler }) => {
           <br />
           외부 영역을 누르면 모달이 닫혀요.
         </p>
-        <button onClick={openMiniModalHandler}>X</button>
+        <RightTopPosition>
+          <Button
+            onClick={openMiniModalHandler}
+            size={"short"}
+            btn_style={"primary"}
+            icon={"off"}
+          >
+            <XLg color="" size={12} />
+          </Button>
+        </RightTopPosition>
       </Modal>
     </ModalContainer>
   );
