@@ -1,7 +1,7 @@
 import React from "react";
 import { Overlay, ModalContainer, Modal } from "../../styles/ModalStyle";
 import Button from "../Button";
-import { VerticalContainer } from "../../styles/ButtonStyle";
+import { HorizontalContainer } from "../../styles/ButtonStyle";
 
 const ModalWindow = ({ openModalHandler, confirmButton }) => {
   return (
@@ -11,7 +11,7 @@ const ModalWindow = ({ openModalHandler, confirmButton }) => {
         <p>
           닫기와 확인 버튼 2개가 있고, 외부 영역을 눌러도 모달이 닫히지 않아요.
         </p>
-        <VerticalContainer>
+        <HorizontalContainer>
           <Button
             onClick={openModalHandler}
             size={"medium"}
@@ -28,7 +28,7 @@ const ModalWindow = ({ openModalHandler, confirmButton }) => {
           >
             check
           </Button>
-        </VerticalContainer>
+        </HorizontalContainer>
       </Modal>
     </ModalContainer>
   );

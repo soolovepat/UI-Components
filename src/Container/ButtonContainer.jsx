@@ -1,6 +1,6 @@
 import React from "react";
 import UiBox from "./UiBox";
-import { StBox, StButton } from "../styles/ButtonStyle";
+import { VerticalContainer } from "../styles/ButtonStyle";
 import Button from "../components/Button";
 import { ChevronRight, Bell } from "react-bootstrap-icons";
 
@@ -8,7 +8,7 @@ const ButtonContainer = () => {
   return (
     <>
       <UiBox title={"Primary Button"}>
-        <StBox>
+        <VerticalContainer>
           <Button
             onClick={() => alert("알림이 설정되었습니다")}
             size={"large"}
@@ -23,10 +23,10 @@ const ButtonContainer = () => {
           <Button size={"small"} btn_style={"primary"} icon={"off"}>
             small
           </Button>
-        </StBox>
+        </VerticalContainer>
       </UiBox>
       <UiBox title={"Secondary Button"}>
-        <StBox>
+        <VerticalContainer>
           <Button
             onClick={() => prompt("암호를 입력해주세요")}
             size={"large"}
@@ -41,7 +41,7 @@ const ButtonContainer = () => {
           <Button size={"small"} btn_style={"secondary"} icon={"off"}>
             small
           </Button>
-        </StBox>
+        </VerticalContainer>
       </UiBox>
     </>
   );
