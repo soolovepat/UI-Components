@@ -1,5 +1,4 @@
 import React from "react";
-
 import Modal from "../components/Modal";
 import ButtonContainer from "../Container/ButtonContainer";
 
